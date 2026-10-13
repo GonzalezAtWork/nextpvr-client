@@ -1,0 +1,46 @@
+{
+  "folders": [{ "name": "NextPVR — Samsung BU8000 / Tizen 6.5", "path": "src/NextPvr.Tizen.Legacy" }],
+  "extensions": { "recommendations": ["tizen.vscode-tizen-csharp"] },
+  "settings": {
+    "tizen.v2.working.project": "C:\\Projetos\\NextPVRClient\\src\\NextPvr.Tizen.Legacy",
+    "dotnet.defaultSolution": "NextPvr.Tizen.Legacy.sln",
+    "dotnetAcquisitionExtension.existingDotnetPath": [
+      { "extensionId": "ms-dotnettools.csharp", "path": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet\\dotnet.exe" },
+      { "extensionId": "ms-dotnettools.csdevkit", "path": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet\\dotnet.exe" }
+    ],
+    "dotnet.server.environmentVariables": {
+      "DOTNET_ROOT": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet",
+      "DOTNET_ROOT_X64": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet",
+      "DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet",
+      "MSBuildSDKsPath": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet\\sdk\\8.0.424\\Sdks"
+    },
+    "terminal.integrated.env.windows": {
+      "DOTNET_ROOT": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet",
+      "DOTNET_ROOT_X64": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet",
+      "PATH": "C:\\Projetos\\NextPVRClient\\.tools\\dotnet;${env:PATH}"
+    }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [{
+      "label": "NextPVR: compilar TPK com SDK local",
+      "type": "process",
+      "command": "${workspaceFolder}/../../.tools/dotnet/dotnet.exe",
+      "args": ["build", "${workspaceFolder}/NextPvr.Tizen.Legacy.csproj", "-c", "Release", "-p:RestoreConfigFile=${workspaceFolder}/../../NuGet.Config"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": "$msCompile",
+      "group": { "kind": "build", "isDefault": true }
+    }, {
+      "label": "NextPVR: assinar e instalar na BU8000",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-File", "${workspaceFolder}/../../scripts/deploy-tizen65.ps1", "-ProfileName", "${input:samsungProfile}", "-DeviceSerial", "${input:tvSerial}"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": "$msCompile"
+    }],
+    "inputs": [
+      { "id": "samsungProfile", "type": "promptString", "description": "Nome do perfil Samsung TV autorizado para o DUID da BU8000", "default": "Decaedro Samsung" },
+      { "id": "tvSerial", "type": "promptString", "description": "IP e porta da TV conectada", "default": "192.168.15.34:26101" }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0</TargetFramework><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup Condition="'$(UseLegacyCore)' != 'true'"><ProjectReference Include="../../src/NextPvr.Core/NextPvr.Core.csproj"/></ItemGroup>
+  <ItemGroup Condition="'$(UseLegacyCore)' == 'true'"><Reference Include="NextPvr.Core"><HintPath>../../src/NextPvr.Core/bin/Release/netstandard2.1/NextPvr.Core.dll</HintPath></Reference></ItemGroup>
+</Project>

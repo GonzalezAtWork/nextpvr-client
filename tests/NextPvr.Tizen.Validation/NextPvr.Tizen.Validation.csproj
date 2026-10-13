@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiles the native UI against Tizen reference APIs without packaging or claiming device validation. -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework></PropertyGroup>
+  <ItemGroup><Compile Include="../../src/NextPvr.Tizen/Program.cs" Link="Program.cs"/><ProjectReference Include="../../src/NextPvr.Core/NextPvr.Core.csproj"/><PackageReference Include="Tizen.NET" Version="13.0.0.19198"/></ItemGroup>
+</Project>

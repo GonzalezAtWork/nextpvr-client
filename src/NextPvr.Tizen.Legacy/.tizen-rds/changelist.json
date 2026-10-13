@@ -1,0 +1,23 @@
+{
+  "projectDir": "C:\\Projetos\\NextPVRClient\\src\\NextPvr.Tizen.Legacy",
+  "deploys": {
+    "next": [
+      {
+        "path": "bin/Debug/tizen90/tpkroot/bin/NextPvr.Core.dll",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/tizen90/tpkroot/bin/NextPvr.Tizen.Legacy.dll",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/tizen90/tpkroot/NextPvr.Tizen.Legacy.deps.json",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/tizen90/tpkroot/tizen-manifest.xml",
+        "type": "add"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+<Project Sdk="Tizen.NET.Sdk/1.1.7">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- tizen90 denotes TizenFX API 9 (Tizen OS 6.5), not Tizen OS 9. -->
+    <TargetFramework>tizen90</TargetFramework>
+    <AssemblyName>NextPvr.Tizen.Legacy</AssemblyName>
+    <DefineConstants>$(DefineConstants);TIZEN65</DefineConstants>
+    <TizenManifestFile>tizen-manifest.xml</TizenManifestFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../NextPvr.Tizen/Program.cs" Link="Program.cs"/>
+    <ProjectReference Include="../NextPvr.Core/NextPvr.Core.csproj"/>
+  </ItemGroup>
+</Project>

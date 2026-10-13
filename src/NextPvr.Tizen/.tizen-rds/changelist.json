@@ -1,0 +1,27 @@
+{
+  "projectDir": "c:\\Projetos\\NextPVRClient\\src\\NextPvr.Tizen",
+  "deploys": {
+    "next": [
+      {
+        "path": "bin/Debug/net8.0-tizen10.0/tpkroot/bin/NextPvr.Core.dll",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/net8.0-tizen10.0/tpkroot/bin/NextPvr.Tizen.dll",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/net8.0-tizen10.0/tpkroot/bin/NextPvr.Tizen.runtimeconfig.json",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/net8.0-tizen10.0/tpkroot/NextPvr.Tizen.deps.json",
+        "type": "add"
+      },
+      {
+        "path": "bin/Debug/net8.0-tizen10.0/tpkroot/tizen-manifest.xml",
+        "type": "add"
+      }
+    ]
+  }
+}

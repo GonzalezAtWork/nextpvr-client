@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0-android</TargetFramework><OutputType>Exe</OutputType><SupportedOSPlatformVersion>23</SupportedOSPlatformVersion><ApplicationId>com.nextpvrclient.sala</ApplicationId><ApplicationTitle>NextPVR Sala</ApplicationTitle><ApplicationVersion>1</ApplicationVersion><ApplicationDisplayVersion>1.0</ApplicationDisplayVersion><AndroidPackageFormats>apk</AndroidPackageFormats></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../NextPvr.Core/NextPvr.Core.csproj"/><PackageReference Include="LibVLCSharp" Version="3.9.4"/><PackageReference Include="VideoLAN.LibVLC.Android" Version="3.6.5"/></ItemGroup>
+</Project>

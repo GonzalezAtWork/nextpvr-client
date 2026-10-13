@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-tizen10.0</TargetFramework><TizenManifestFile>tizen-manifest.xml</TizenManifestFile><TizenPackageType>tpk</TizenPackageType></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../NextPvr.Core/NextPvr.Core.csproj"/><PackageReference Include="Tizen.NET" Version="13.0.0.19198"/></ItemGroup>
+</Project>
