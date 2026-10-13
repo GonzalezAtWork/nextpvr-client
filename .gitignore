@@ -1,0 +1,64 @@
+# .NET: compilation, publishing and test output
+**/[Bb]in/
+**/[Oo]bj/
+/artifacts/
+/TestResults/
+**/TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Local SDKs and downloaded research material
+/.tools/
+/.research/
+
+# IDE caches and user-specific settings
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Generated Tizen extension state
+tizen_dotnet_project.yaml
+.buildResult/
+.sdktools/
+
+# Generated application packages
+*.apk
+*.aab
+*.tpk
+*.wgt
+*.nupkg
+*.snupkg
+
+# Certificates, private keys and signing profiles
+*.p12
+*.pfx
+*.key
+*.pem
+*.keystore
+*.jks
+profiles.xml
+/SamsungCertificate/
+/certificates/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+
+# Logs, temporary files and OS metadata
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
